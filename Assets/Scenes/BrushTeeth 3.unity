@@ -177,12 +177,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cced224b6eaa4adb83bf58fbb81852e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5198850c6fbc4ec9abd8d2878fb6a53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.8, y: 4.8}
+  m_Size: {x: 3.66, y: 2.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 1654881866}
   - component: {fileID: 1654881867}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: Monster stage 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,6 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ec1156305d941bb875cce2539e7ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeMouthDelay: 2
 --- !u!95 &1654881867
 Animator:
   serializedVersion: 3
@@ -451,7 +452,7 @@ Animator:
   m_GameObject: {fileID: 1654881863}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 461dbb7311daf4e86941fe7c18dfc856, type: 2}
+  m_Controller: {fileID: 9100000, guid: 91efe3c34ec334070af59497c941f18f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
