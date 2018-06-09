@@ -14,7 +14,7 @@ public class Button : MonoBehaviour {
 		
 	}
 
-	void OnMouseDown() {
+	void OnPointerDown() {
 		Debug.Log("Pressed");
 	}
 }
