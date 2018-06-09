@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class FlyObject : MonoBehaviour {
 
+	private Game_FeedFly goFeedFly;
+
 	// Use this for initialization
 	void Start () {
 		
+		//GameObject go = GameObject.Find("_Main_");
+        
+		goFeedFly = GameObject.Find("_Main_").GetComponent<Game_FeedFly>();
+
 	}
 
 
@@ -35,10 +41,16 @@ public class FlyObject : MonoBehaviour {
 
 	void OnMouseDown()
     {
-		Debug.Log("Fly Clicked " + this.name);
+		goFeedFly.FlyCount++;
+
+		if (goFeedFly.FlyCount == goFeedFly.FliesNeeded)
+		{
+			//if (Game_FeedFly.FliesNeeded)
+            Debug.Log("Fly Clicked " + this.name);
+		}
 
 		this.gameObject.SetActive(false);
-		Destroy(this);
+        Destroy(this);
     }
 
 }

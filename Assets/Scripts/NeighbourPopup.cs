@@ -7,7 +7,16 @@ public class NeighbourPopup : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		iTween.MoveBy(this.gameObject, iTween.Hash("y", 4, "easeType", "easeInOutExpo", "loopType", "pingPong", "delay", .01));
+    	iTween.MoveBy(this.gameObject, iTween.Hash("y", 
+    	                                           4, 
+    	                                           "easeType", 
+    	                                           "easeInOutExpo", 
+    	                                           "loopType", 
+    	                                           "pingPong", 
+    	                                           "delay", 
+    	                                           .01
+    	                                          )
+    	             );
 
 	}
 	
@@ -18,7 +27,7 @@ public class NeighbourPopup : MonoBehaviour {
 
 	public void PopUp()
 	{
-		transform.Translate(0, 0, 0);
+		//transform.Translate(0, 0, 0);
 	}
 
 	void OnMouseDown()
