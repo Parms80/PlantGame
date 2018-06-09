@@ -18,7 +18,19 @@ public class FlyObject : MonoBehaviour {
 		float x = speed * Time.deltaTime * Random.RandomRange(-speed, speed);
 		float y = speed * Time.deltaTime * Random.RandomRange(-speed, speed);
 
-		transform.Translate(x, y , 0);
+		int xbounds = 2;
+		int ybounds = 2;
+
+		transform.Translate(x, y, 0);
+
+		/*if (this.transform.localPosition.x > -xbounds &&
+			this.transform.localPosition.x < xbounds)
+			transform.Translate(x, 0, 0);
+
+		if (this.transform.localPosition.y > -ybounds &&
+            this.transform.localPosition.y < ybounds)
+            transform.Translate(0, y, 0);
+		*/
 	}
 
 	void OnMouseDown()
