@@ -11,9 +11,11 @@ public class Bucket : MonoBehaviour {
 	public Text bucketFullText;
 	private bool moveLeft = false;
 	private bool moveRight = false;
+	private LevelManager levelManager;
 
 	// Use this for initialization
 	void Start () {
+		levelManager = GameObject.FindObjectOfType<LevelManager>();
 		
 	}
 	
@@ -48,6 +50,7 @@ public class Bucket : MonoBehaviour {
 
 		if (numDripsCaught == dripsUntilFull) {
 			bucketFullText.gameObject.SetActive(true);
+			levelManager.LoadLevel ("Congrats");
 		}
 	}
 }
