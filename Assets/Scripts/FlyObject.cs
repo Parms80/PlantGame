@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlyObject : MonoBehaviour {
 
@@ -49,6 +50,7 @@ public class FlyObject : MonoBehaviour {
 			{
 				// NEXT LEVEL
 				Debug.Log("Next Level");
+				SceneManager.LoadScene ("Evolve 2");
 			}
 
 			this.gameObject.SetActive(false);
@@ -57,7 +59,7 @@ public class FlyObject : MonoBehaviour {
 		else
 		{
 			// Game Over
-			Debug.Log("Game Over");
+			SceneManager.LoadScene ("_GameOver");
 		}
     }
 

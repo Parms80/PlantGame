@@ -596,6 +596,11 @@ Prefab:
       propertyPath: successText
       value: 
       objectReference: {fileID: 1344029570}
+    - target: {fileID: 114674735385332424, guid: cf5408900936044c694f6f4fe8de8bb8,
+        type: 2}
+      propertyPath: nextLevel
+      value: Evolve 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf5408900936044c694f6f4fe8de8bb8, type: 2}
   m_IsPrefabParent: 0

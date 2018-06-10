@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountActiveFlies : MonoBehaviour {
 
 	public Monster monster;
 	public Text successText;
+	public string nextLevel;
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +21,14 @@ public class CountActiveFlies : MonoBehaviour {
 			}
 			if (numFlies == 0) {
 				successText.gameObject.SetActive (true);
+				StartCoroutine(LoadNextStage());
 			}
 		}
+	}
+
+	IEnumerator LoadNextStage()
+	{
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene (nextLevel);
 	}
 }

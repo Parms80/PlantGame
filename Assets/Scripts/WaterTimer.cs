@@ -41,8 +41,6 @@ public class WaterTimer : MonoBehaviour {
 	}
 
 	void fadeInSunnyBackground(float alpha) {
-//		float alpha = 1 - (maxTime-t)/maxTime;
-//		Debug.Log ("t = " + t+ ", alpha = "+alpha);
 
 		backgroundImage.color = new Color(backgroundImage.color.r, 
 										  backgroundImage.color.g, 

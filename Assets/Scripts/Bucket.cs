@@ -10,6 +10,7 @@ public class Bucket : MonoBehaviour {
 	public int numDripsCaught = 0;
 	public int dripsUntilFull = 10;
 	public Text bucketFullText;
+	public string nextScene;
 	private bool moveLeft = false;
 	private bool moveRight = false;
 
@@ -53,6 +54,6 @@ public class Bucket : MonoBehaviour {
 	IEnumerator LoadNextLevel()
 	{
 		yield return new WaitForSeconds(2);
-		SceneManager.LoadScene ("_Congrats");
+		SceneManager.LoadScene (nextScene);
 	}
 }

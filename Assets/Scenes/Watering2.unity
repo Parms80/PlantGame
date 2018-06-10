@@ -1069,6 +1069,7 @@ MonoBehaviour:
   numDripsCaught: 0
   dripsUntilFull: 10
   bucketFullText: {fileID: 454616157}
+  nextScene: FeedFly1
 --- !u!61 &895442735
 BoxCollider2D:
   m_ObjectHideFlags: 0
