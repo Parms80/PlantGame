@@ -10,12 +10,13 @@ public class wobbleAnim : MonoBehaviour {
 		iTween.ScaleBy(this.gameObject, iTween.Hash(
 			"x", 1.05, 
 			"z", 1.05, 
-			"default", .2,
+			"default", .1,
 			"easeType",
             "easeInOutExpo",
 			"loopType", "pingPong"
 		));
-       /* this
+
+		/* this
 		iTween.ScaleBy(this.gameObject, iTween.Hash("y",
                                                    4,
                                                    "easeType",

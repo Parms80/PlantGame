@@ -8,7 +8,7 @@ public class NeighbourPopup : MonoBehaviour {
 	void Start () {
 		
     	iTween.MoveBy(this.gameObject, iTween.Hash("y", 
-    	                                           4, 
+    	                                           6, 
     	                                           "easeType", 
     	                                           "easeInOutExpo", 
     	                                           "loopType", 
