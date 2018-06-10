@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Bucket : MonoBehaviour {
 
@@ -11,15 +12,10 @@ public class Bucket : MonoBehaviour {
 	public Text bucketFullText;
 	private bool moveLeft = false;
 	private bool moveRight = false;
-	private LevelManager levelManager;
 
-	// Use this for initialization
 	void Start () {
-		levelManager = GameObject.FindObjectOfType<LevelManager>();
-		
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		UpdateBucket();
 	}
@@ -50,7 +46,13 @@ public class Bucket : MonoBehaviour {
 
 		if (numDripsCaught == dripsUntilFull) {
 			bucketFullText.gameObject.SetActive(true);
-			levelManager.LoadLevel ("Congrats");
+			StartCoroutine(LoadNextLevel());
 		}
+	}
+
+	IEnumerator LoadNextLevel()
+	{
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene ("_Congrats");
 	}
 }

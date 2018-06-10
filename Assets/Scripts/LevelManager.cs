@@ -16,8 +16,20 @@ public class LevelManager : MonoBehaviour {
 
 	public void LoadLevel(string name){
 		Debug.Log ("New Level load: " + name);
-		//		Application.LoadLevel (name);
 		SceneManager.LoadScene (name);
+	}
+
+	public void LoadLevelStage(){
+		Debug.Log ("LoadLevelStage: " + Global.curStage);
+
+		switch (Global.curStage) {
+		case 0:
+			SceneManager.LoadScene ("_MainMenu");
+			break;
+		case 1:
+			SceneManager.LoadScene ("Watering");
+			break;
+		}
 	}
 
 	public void QuitRequest(){

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaterTimer : MonoBehaviour {
 
@@ -10,8 +11,11 @@ public class WaterTimer : MonoBehaviour {
 	public int maxTime = 5;
 	public GameObject sunnyBackground;
 	private SpriteRenderer backgroundImage;
+	public Text timeOverText;
+	public int stage = 1;
 
 	void Start () {
+		Global.curStage = stage;
 		txtTimer = GetComponent<Text>();
 		backgroundImage = sunnyBackground.GetComponent<SpriteRenderer> ();		
 	}
@@ -31,7 +35,8 @@ public class WaterTimer : MonoBehaviour {
 		}
 		else
 		{
-			// gameOver
+			timeOverText.gameObject.SetActive (true);
+			StartCoroutine(LoadGameOver());
 		}
 	}
 
@@ -43,5 +48,11 @@ public class WaterTimer : MonoBehaviour {
 										  backgroundImage.color.g, 
 										  backgroundImage.color.b, 
 										  alpha);
+	}
+
+	IEnumerator LoadGameOver()
+	{
+		yield return new WaitForSeconds(2);
+		SceneManager.LoadScene ("_GameOver");
 	}
 }
