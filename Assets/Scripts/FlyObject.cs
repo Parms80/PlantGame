@@ -41,9 +41,11 @@ public class FlyObject : MonoBehaviour {
 
 	void OnMouseDown()
     {
-		goFeedFly.FlyCount++;
+		//goFeedFly.FlyCount++;
+        
+		goFeedFly.progress.value++;
 
-		if (goFeedFly.FlyCount == goFeedFly.FliesNeeded)
+		if (goFeedFly.progress.value == goFeedFly.FliesNeeded)
 		{
 			//if (Game_FeedFly.FliesNeeded)
             Debug.Log("Fly Clicked " + this.name);
