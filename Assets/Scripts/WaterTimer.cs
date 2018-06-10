@@ -20,22 +20,24 @@ public class WaterTimer : MonoBehaviour {
 	void Update () {
 
 		timer += Time.deltaTime;
+		float alpha = 1 - (maxTime-timer)/maxTime;
+				Debug.Log ("timer = " + timer+ ", alpha = "+alpha);
 		int t = System.Convert.ToInt32(timer % 60);
 
 		if (t <= maxTime)
 		{
 			txtTimer.text = "Time: " + (maxTime - t);
+			fadeInSunnyBackground (alpha);
 		}
 		else
 		{
 			// gameOver
 		}
-		fadeInSunnyBackground (t);
 	}
 
-	void fadeInSunnyBackground(int t) {
-		float alpha = 1 - (maxTime-t)/maxTime;
-		Debug.Log ("t = " + t+ ", alpha = "+alpha);
+	void fadeInSunnyBackground(float alpha) {
+//		float alpha = 1 - (maxTime-t)/maxTime;
+//		Debug.Log ("t = " + t+ ", alpha = "+alpha);
 
 		backgroundImage.color = new Color(backgroundImage.color.r, 
 										  backgroundImage.color.g, 
