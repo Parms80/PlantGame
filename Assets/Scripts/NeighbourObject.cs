@@ -17,10 +17,7 @@ public class NeighbourObject : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-
-		// Game Over
-		Debug.Log("Game Over");
-		//this.gameObject.SetActive(false);
+		//.SetActive(false);
 
 		iTween.Stop(this.gameObject);
 
@@ -35,7 +32,15 @@ public class NeighbourObject : MonoBehaviour {
                                                   )
                      );
 
+		StartCoroutine(GameOver());
 
 	}
+
+	IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(2);
+        print("GAME OVER");
+    }
+
 
 }
