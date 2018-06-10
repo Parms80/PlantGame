@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monster : MonoBehaviour {
 
+	public Transform flies;
+	public Text ouchText;
 	public float closeMouthDelay = 2;
-	private SpriteRenderer monsterSprite; 
 	private Animator animator;
+	public bool closedMouth;
 
 	// Use this for initialization
 	void Start () {
-		monsterSprite = GetComponent<SpriteRenderer> ();
 		animator = GetComponent<Animator> ();
+		closedMouth = false;
+		ouchText.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -35,5 +39,25 @@ public class Monster : MonoBehaviour {
 
 	void CloseMouth(){
 		animator.SetTrigger ("closeMouthTrigger");
+	}
+
+	public void HideFlies(){
+		foreach (Transform fly in flies) {
+			fly.gameObject.SetActive (false);
+		}
+		closedMouth = true;
+	}
+
+	public void ShowFlies(){
+		foreach (Transform fly in flies) {
+			fly.gameObject.SetActive (true);
+		}
+		closedMouth = false;
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (closedMouth) {
+			ouchText.gameObject.SetActive (true);
+		}
 	}
 }

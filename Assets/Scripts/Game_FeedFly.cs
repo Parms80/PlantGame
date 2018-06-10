@@ -18,7 +18,7 @@ public class Game_FeedFly : MonoBehaviour {
 
 	private Text txtTimer;
 	private float timer = 0;
-	int maxTime = 5;
+	public int maxTime = 5;
 
 	public Slider progress;
 
