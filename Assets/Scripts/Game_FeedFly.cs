@@ -26,10 +26,10 @@ public class Game_FeedFly : MonoBehaviour {
 		
 		// instantiate flies
 		for (int n = 0; n < nFlies; n++)
-			Instantiate(goBee, new Vector3(Random.RandomRange(-3, 5), Random.RandomRange(-3, 5), 0), Quaternion.Euler(0, 0, 0) );
+			Instantiate(goFly, new Vector3(Random.RandomRange(-6, 6), Random.RandomRange(-4, 4), 0), Quaternion.Euler(0, 0, 0) );
 	
 		for (int n = 0; n < nBees; n++)
-			Instantiate(goBee, new Vector3(Random.RandomRange(-3, 5), Random.RandomRange(-3, 5), 0), Quaternion.Euler(0, 0, 0));
+			Instantiate(goBee, new Vector3(Random.RandomRange(-6, 6), Random.RandomRange(-4, 4), 0), Quaternion.Euler(0, 0, 0));
 	}
 	
 	// Update is called once per frame
