@@ -41,18 +41,24 @@ public class FlyObject : MonoBehaviour {
 
 	void OnMouseDown()
     {
-		//goFeedFly.FlyCount++;
-        
-		goFeedFly.progress.value++;
-
-		if (goFeedFly.progress.value == goFeedFly.FliesNeeded)
+		if (this.name.StartsWith("fly"))
 		{
-			//if (Game_FeedFly.FliesNeeded)
-            Debug.Log("Fly Clicked " + this.name);
-		}
+			goFeedFly.progress.value++;
 
-		this.gameObject.SetActive(false);
-        Destroy(this);
+			if (goFeedFly.progress.value == goFeedFly.FliesNeeded)
+			{
+				// NEXT LEVEL
+				Debug.Log("Next Level");
+			}
+
+			this.gameObject.SetActive(false);
+			Destroy(this);
+		}
+		else
+		{
+			// Game Over
+			Debug.Log("Game Over");
+		}
     }
 
 }

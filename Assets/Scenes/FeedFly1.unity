@@ -406,10 +406,12 @@ MonoBehaviour:
   goFly: {fileID: 1883346086743758, guid: 7b150ac49823e45979c0e9a8772c4b1f, type: 2}
   goBee: {fileID: 1363210158538230, guid: 538dc27e0e19f4088a3d1f30494f8bf5, type: 2}
   goTimer: {fileID: 1736985333}
+  goProgress: {fileID: 1248618773}
   FliesNeeded: 5
   nFlies: 10
   nBees: 10
   FlyCount: 0
+  progress: {fileID: 0}
 --- !u!4 &843282792
 Transform:
   m_ObjectHideFlags: 0
@@ -801,6 +803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725491012}
   - component: {fileID: 1725491011}
+  - component: {fileID: 1725491013}
   m_Layer: 0
   m_Name: monsterstage2
   m_TagString: Untagged
@@ -866,6 +869,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725491013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725491010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9ca6321b48245d7b5199b56b50853d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1736985333
 GameObject:
   m_ObjectHideFlags: 0
